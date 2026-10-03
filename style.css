@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Syne:wght@500;700;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #101014;
+  color: #f4f0ea;
+  font-family: Syne, sans-serif;
+  overflow-x: hidden;
+}
+.noise {
+  position: fixed;
+  inset: 0;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 5px 5px;
+  z-index: 3;
+}
+header {
+  height: 78px;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #37363d;
+  position: relative;
+  z-index: 4;
+}
+.wordmark {
+  color: #f4f0ea;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+}
+.wordmark span {
+  color: #e1ff00;
+}
+header button {
+  border: 0;
+  background: #e1ff00;
+  border-radius: 30px;
+  padding: 10px 14px;
+  font: 11px "DM Mono";
+  color: #101014;
+}
+.landing {
+  min-height: 750px;
+  padding: 12vh 9vw;
+  position: relative;
+}
+.kicker {
+  font: 11px "DM Mono";
+  letter-spacing: 0.08em;
+  color: #bcb8be;
+}
+.landing h1 {
+  font-size: clamp(75px, 13vw, 170px);
+  line-height: 0.78;
+  letter-spacing: -0.09em;
+  margin: 50px 0 0;
+}
+.landing h1 i,
+footer i {
+  color: #e1ff00;
+  font-style: normal;
+}
+.intro {
+  max-width: 270px;
+  position: absolute;
+  right: 12vw;
+  top: 55%;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.scroll {
+  color: #f4f0ea;
+  position: absolute;
+  bottom: 50px;
+  font: 11px "DM Mono";
+  text-decoration: none;
+}
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 12px "DM Mono";
+  animation: float 5s ease-in-out infinite;
+}
+.a {
+  width: 150px;
+  height: 150px;
+  right: 26%;
+  top: 24%;
+  background: #ff5630;
+}
+.b {
+  width: 100px;
+  height: 100px;
+  right: 9%;
+  top: 35%;
+  background: #9b5cff;
+  animation-delay: -2s;
+}
+.c {
+  width: 66px;
+  height: 66px;
+  left: 41%;
+  bottom: 18%;
+  background: #16b8a6;
+  animation-delay: -3s;
+}
+@keyframes float {
+  50% {
+    transform: translateY(-22px) rotate(15deg);
+  }
+}
+.work {
+  padding: 100px 9vw;
+  background: #f4f0ea;
+  color: #101014;
+}
+.project {
+  display: grid;
+  grid-template-columns: 100px 1fr 230px 130px;
+  gap: 20px;
+  align-items: center;
+  border-top: 1px solid #aaa;
+  padding: 34px 0;
+  transition: 0.3s;
+}
+.project:last-child {
+  border-bottom: 1px solid #aaa;
+}
+.project span {
+  font: 11px "DM Mono";
+}
+.project h2 {
+  font-size: clamp(40px, 6vw, 78px);
+  line-height: 0.77;
+  letter-spacing: -0.07em;
+  margin: 0;
+}
+.project p {
+  font-size: 13px;
+  max-width: 170px;
+}
+.project button {
+  border: 1px solid #222;
+  border-radius: 30px;
+  background: none;
+  padding: 10px;
+  font: 10px "DM Mono";
+  transition: 0.2s;
+}
+.project:hover {
+  padding-left: 20px;
+  background: var(--c);
+}
+.project:hover button {
+  background: #101014;
+  color: white;
+}
+.skills {
+  padding: 130px 9vw;
+  background: #9b5cff;
+}
+.skills h2 {
+  font-size: clamp(55px, 10vw, 130px);
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+  margin: 45px 0;
+}
+.skills h2 span {
+  color: #e1ff00;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  max-width: 640px;
+}
+.chips button {
+  font: 13px Syne;
+  border: 1px solid #101014;
+  border-radius: 30px;
+  background: transparent;
+  padding: 12px 17px;
+}
+.chips button:hover {
+  background: #e1ff00;
+}
+footer {
+  padding: 100px 9vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+footer p {
+  font-size: clamp(35px, 6vw, 75px);
+  letter-spacing: -0.06em;
+  line-height: 0.85;
+  margin: 0;
+}
+footer a {
+  color: #101014;
+  background: #e1ff00;
+  border-radius: 30px;
+  padding: 15px;
+  text-decoration: none;
+  font: 11px "DM Mono";
+}
+@media (max-width: 700px) {
+  .landing {
+    min-height: 620px;
+    padding: 16vh 7vw;
+  }
+  .intro {
+    right: 7vw;
+    top: 65%;
+  }
+  .ball.a {
+    right: 12%;
+    top: 27%;
+    width: 100px;
+    height: 100px;
+  }
+  .ball.b {
+    right: 3%;
+    top: 43%;
+  }
+  .work {
+    padding: 70px 7vw;
+  }
+  .project {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+  }
+  .project p,
+  .project button {
+    grid-column: 2;
+  }
+  .skills,
+  footer {
+    padding: 80px 7vw;
+  }
+  footer {
+    display: block;
+  }
+  footer a {
+    display: inline-block;
+    margin-top: 35px;
+  }
+}
